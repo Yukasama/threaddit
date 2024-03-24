@@ -1,1 +1,1 @@
-using from './users/annotations';
+using from '../srv/user-service';
