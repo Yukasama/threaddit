@@ -15,8 +15,8 @@
   "devDependencies": {
     "@cap-js/sqlite": "^1",
     "@sap/cds-dk": "^7",
-    "cds-plugin-ui5": "^0.2.1",
     "@sap/ux-specification": "UI5-1.122",
+    "cds-plugin-ui5": "^0.2.1",
     "webapp": "*"
   },
   "scripts": {
@@ -25,6 +25,12 @@
     "dev-approuter": "cds bind --exec -- npm run dev --prefix ../approuter"
   },
   "cds": {
+    "[development]": {
+      "auth": "xsuaa"
+    },
+    "[hybrid]": {
+      "auth": "xsuaa"
+    },
     "requires": {
       "[production]": {
         "db": "hana",

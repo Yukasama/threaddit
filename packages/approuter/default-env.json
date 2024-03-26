@@ -1,13 +1,38 @@
 {
   "PORT": 5001,
   "destinations": [
+    {
+      "Name": "cap-server",
+      "Authentication": "NoAuthentication",
+      "ProxyType": "Internet",
+      "Type": "HTTP",
+      "URL": "http://localhost:4004",
+      "forwardAuthToken": true
+    }
+  ],
+  "VCAP_SERVICES": {
+    "xsuaa": [
       {
-          "Name": "cap-server",
-          "Authentication": "NoAuthentication",
-          "ProxyType": "Internet",
-          "Type": "HTTP",
-          "URL": "http://localhost:4004",
-          "forwardAuthToken": true
+        "tags": ["xsuaa"],
+        "credentials": {
+          "apiurl": "https://api.authentication.us10.hana.ondemand.com",
+          "clientid": "sb-auth!t259178",
+          "clientsecret": "yC3uhvNDTw4F6lfp8EHfmMD6a6s=",
+          "credential-type": "instance-secret",
+          "identityzone": "e9ff091ftrial",
+          "identityzoneid": "7d8b6cd5-1ae6-4654-a7d8-b4a95edfa808",
+          "sburl": "https://internal-xsuaa.authentication.us10.hana.ondemand.com",
+          "serviceInstanceId": "580bd3e5-42b1-434f-b61f-d9e087ca06e0",
+          "subaccountid": "7d8b6cd5-1ae6-4654-a7d8-b4a95edfa808",
+          "tenantid": "7d8b6cd5-1ae6-4654-a7d8-b4a95edfa808",
+          "tenantmode": "dedicated",
+          "uaadomain": "authentication.us10.hana.ondemand.com",
+          "url": "https://e9ff091ftrial.authentication.us10.hana.ondemand.com",
+          "verificationkey": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuH154lVel6FpZwicmeiU\nA6gZfaYX6/saMqKgwF6QFvlyCLycMch8BMFRJRv1E9t7pe9Lttsw1yQXwr9QoFEv\njZ+M2/sug6HOa/DBpSE+Bw/SGvumRBesoK4pSDjnDE3nn3eLPUxS6imA0EwBM8z7\ndLd4Bhh1X6XephJcHBcVkTEuNBi4KhYCf6Nyql3RuSb05xF4TNbpDGiweQmUg9OO\nl+bnn1CyN98K4MqrhrYAuU+UB2u4qGz7ck/BqKEti+KZWLyCQJp7vQMTBkbN/WTW\nIwt1t0GydWaQfd86ZaseS4Z4uqvfK7909XdkogZBDW1s3sPgWfi9P2y2Sl44+eGM\nYwIDAQAB\n-----END PUBLIC KEY-----",
+          "xsappname": "auth!t259178",
+          "zoneid": "7d8b6cd5-1ae6-4654-a7d8-b4a95edfa808"
+        }
       }
-  ]
+    ]
+  }
 }

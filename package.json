@@ -4,9 +4,12 @@
     "packages/*"
   ],
   "scripts": {
-    "dev": "npm run dev -w=cap-server"
+    "dev": "npm run dev -w=approuter"
   },
   "sapux": [
     "packages/webapp"
-  ]
+  ],
+  "devDependencies": {
+    "@sap/cds-dk": "^7"
+  }
 }
