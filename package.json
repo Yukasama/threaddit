@@ -1,23 +1,12 @@
 {
   "name": "threaddit",
-  "version": "1.0.0",
-  "description": "A simple CAP project.",
-  "repository": "<Add your repository here>",
-  "license": "UNLICENSED",
-  "private": true,
-  "dependencies": {
-    "@sap/approuter": "^16.2.1",
-    "@sap/cds": "^7",
-    "express": "^4"
-  },
-  "devDependencies": {
-    "@cap-js/sqlite": "^1",
-    "@sap/ux-specification": "UI5-1.122"
-  },
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
-    "start": "cds-serve"
+    "dev": "npm run dev -w=cap-server"
   },
   "sapux": [
-    "app/users"
+    "packages/webapp"
   ]
 }

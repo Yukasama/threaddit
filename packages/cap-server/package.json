@@ -1,0 +1,35 @@
+{
+  "name": "cap-server",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "repository": "<Add your repository here>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@sap/cds": "^7",
+    "express": "^4",
+    "@sap/cds-hana": "^2",
+    "@sap/xssec": "^3",
+    "passport": "^0"
+  },
+  "devDependencies": {
+    "@cap-js/sqlite": "^1",
+    "@sap/cds-dk": "^7",
+    "cds-plugin-ui5": "^0.2.1",
+    "@sap/ux-specification": "UI5-1.122",
+    "webapp": "*"
+  },
+  "scripts": {
+    "start": "cds-serve",
+    "dev": "cds watch",
+    "dev-approuter": "cds bind --exec -- npm run dev --prefix ../approuter"
+  },
+  "cds": {
+    "requires": {
+      "[production]": {
+        "db": "hana",
+        "auth": "xsuaa"
+      }
+    }
+  }
+}
