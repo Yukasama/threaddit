@@ -1,5 +1,5 @@
 {
-  "welcomeFile": "webapp/layout.tsx",
+  "welcomeFile": "space-app/webapp/index.html",
   "authenticationMethod": "route",
   "routes": [
     {
@@ -9,6 +9,10 @@
     },
     {
       "dependency": "webapp",
+      "authenticationType": "xsuaa"
+    },
+    {
+      "dependency": "space-app",
       "authenticationType": "xsuaa"
     },
     {

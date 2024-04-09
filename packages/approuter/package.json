@@ -1,11 +1,12 @@
 {
   "name": "approuter",
   "scripts": {
-      "dev": "CDS_ENV=hybrid node -e 'new require(`dev-approuter`)' _"
+    "dev": "cross-env CDS_ENV=hybrid node -e 'new require(`dev-approuter`)' _"
   },
   "devDependencies": {
-      "dev-approuter": "*",
-      "cap-server": "*",
-      "webapp": "*"
+    "dev-approuter": "*",
+    "cap-server": "*",
+    "webapp": "*",
+    "space-app": "*"
   }
 }
