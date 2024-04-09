@@ -1,4 +1,4 @@
-namespace threaddit;
+namespace db;
 
 using {
   managed,
@@ -30,6 +30,7 @@ entity Members : cuid, managed {
 entity Posts : cuid, managed {
   title  : String(100);
   text   : String(1000);
+  parent : Association to Posts;
   space  : Association to Spaces;
   author : Association to Users;
 }

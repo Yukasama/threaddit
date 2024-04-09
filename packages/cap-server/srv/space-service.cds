@@ -1,4 +1,4 @@
-using {threaddit as db} from '../db/schema';
+using {db} from '../db/schema';
 
 @path: 'service/spaces'
 service SpaceService {
