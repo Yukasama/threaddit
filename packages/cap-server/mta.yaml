@@ -61,7 +61,7 @@ modules:
       target-path: resources/
 - name: spaceapp
   type: html5
-  path: app/space-app
+  path: app/spaceapp
   build-parameters:
     build-result: dist
     builder: custom

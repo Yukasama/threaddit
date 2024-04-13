@@ -1,5 +1,5 @@
 {
-  "welcomeFile": "space-app/webapp/index.html",
+  "welcomeFile": "frontend/layout.tsx",
   "authenticationMethod": "route",
   "routes": [
     {
@@ -8,11 +8,7 @@
       "service": "sap-approuter-userapi"
     },
     {
-      "dependency": "webapp",
-      "authenticationType": "xsuaa"
-    },
-    {
-      "dependency": "space-app",
+      "dependency": "spaceapp",
       "authenticationType": "xsuaa"
     },
     {

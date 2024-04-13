@@ -8,6 +8,6 @@
   },
   "sapux": [
     "packages/webapp",
-    "packages/space-app"
+    "packages/spaceapp"
   ]
 }

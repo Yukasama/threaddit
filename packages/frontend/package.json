@@ -1,5 +1,5 @@
 {
-  "name": "webapp",
+  "name": "frontend",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint"
   },
-  "main": "layout.tsx",
+  "main": "webapp/layout.tsx",
   "dependencies": {
     "@ui5/webcomponents": "^1.23.1",
     "@ui5/webcomponents-base": "^1.23.1",
