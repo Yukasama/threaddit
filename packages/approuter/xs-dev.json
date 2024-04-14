@@ -1,6 +1,11 @@
 {
   "welcomeFile": "mainapp/index.html",
-  "authenticationMethod": "route",
+  "authenticationMethod": "none",
+  "httpHeaders": [
+    {
+      "Content-Type": "application/javascript js mjs"
+    }
+  ],
   "routes": [
     {
       "source": "^/user-api(.*)",
@@ -18,10 +23,10 @@
       "localDir": "../"
     },
     {
-      "source": "^/(.*)",
+      "source": "^/mainapp/dist/(.*)",
       "dependency": "mainapp",
       "authenticationType": "xsuaa",
-      "localDir": "../mainapp",
+      "localDir": "../mainapp/dist/",
       "replace": {
         "pathSuffixes": ["index.html", ".js"],
         "vars": ["escaped_text", "NOT_ESCAPED"]
