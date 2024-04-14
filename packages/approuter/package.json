@@ -1,7 +1,8 @@
 {
   "name": "approuter",
   "scripts": {
-    "dev": "cross-env CDS_ENV=hybrid node -e 'new require(`dev-approuter`)' _"
+    "dev": "cross-env CDS_ENV=hybrid node -e 'require(`dev-approuter`)' _",
+    "dev:mac": "cross-env CDS_ENV=hybrid node -e 'new require(`dev-approuter`)' _"
   },
   "devDependencies": {
     "dev-approuter": "*",
