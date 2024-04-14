@@ -7,6 +7,7 @@
     "dev-approuter": "*",
     "cap-server": "*",
     "frontend": "*",
-    "spaceapp": "*"
+    "spaceapp": "*",
+    "mainapp": "*"
   }
 }

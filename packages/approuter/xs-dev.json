@@ -1,5 +1,5 @@
 {
-  "welcomeFile": "frontend/layout.tsx",
+  "welcomeFile": "mainapp/index.html",
   "authenticationMethod": "route",
   "routes": [
     {
@@ -10,6 +10,22 @@
     {
       "dependency": "spaceapp",
       "authenticationType": "xsuaa"
+    },
+    {
+      "source": "^/(.*)",
+      "dependency": "frontend",
+      "authenticationType": "xsuaa",
+      "localDir": "../"
+    },
+    {
+      "source": "^/(.*)",
+      "dependency": "mainapp",
+      "authenticationType": "xsuaa",
+      "localDir": "../mainapp",
+      "replace": {
+        "pathSuffixes": ["index.html", ".js"],
+        "vars": ["escaped_text", "NOT_ESCAPED"]
+      }
     },
     {
       "dependency": "cap-server",

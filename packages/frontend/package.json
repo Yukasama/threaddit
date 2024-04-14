@@ -6,9 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export": "next export"
   },
-  "main": "webapp/layout.tsx",
+  "main": "layout.tsx",
   "dependencies": {
     "@ui5/webcomponents": "^1.23.1",
     "@ui5/webcomponents-base": "^1.23.1",

@@ -1,6 +1,6 @@
 using SpaceService as service from '../cap-server/srv/space-service';
 
-annotate service.Space with @(UI.LineItem: [
+annotate service.Spaces with @(UI.LineItem: [
   {
     $Type: 'UI.DataField',
     Label: 'name',
@@ -13,7 +13,7 @@ annotate service.Space with @(UI.LineItem: [
   },
 ]);
 
-annotate service.Space with @(
+annotate service.Spaces with @(
   UI.FieldGroup #GeneratedGroup1: {
     $Type: 'UI.FieldGroupType',
     Data : [

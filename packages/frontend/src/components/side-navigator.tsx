@@ -5,7 +5,6 @@ import {
   SideNavigationItem,
   SideNavigationSubItem,
 } from "@ui5/webcomponents-react";
-import homeIcon from "@ui5/webcomponents-icons/dist/home.js";
 
 export const SideNavigator = () => {
   return (
@@ -22,7 +21,7 @@ export const SideNavigator = () => {
         </>
       }
       onSelectionChange={function _a() {}}>
-      <SideNavigationItem icon={homeIcon} text="Home" />
+      <SideNavigationItem text="Home" />
       <SideNavigationItem expanded icon="group" text="People">
         <SideNavigationSubItem text="From My Team" />
         <SideNavigationSubItem text="From Other Teams" />

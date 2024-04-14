@@ -3,8 +3,6 @@
 import { Button, Popover, Table } from "@ui5/webcomponents-react";
 import { TableRow, TableCell, TableColumn } from "@ui5/webcomponents-react";
 import Link from "next/link";
-import editIcon from "@ui5/webcomponents-icons/dist/edit.js";
-import chainLinkIcon from "@ui5/webcomponents-icons/dist/chain-link.js";
 
 interface Props {
   data: any[];
@@ -28,7 +26,7 @@ export default function UserTable({ data }: Props) {
           <TableCell>{user.createdAt}</TableCell>
           <TableCell>{user.createdBy}</TableCell>
           <TableCell>
-            <Button id={`edit-${user.ID}`} icon={editIcon} />
+            <Button id={`edit-${user.ID}`} />
             <Popover
               className="footerPartNoPadding"
               headerText="Edit User"
@@ -41,7 +39,7 @@ export default function UserTable({ data }: Props) {
               placementType="Bottom"
               verticalAlign="Center">
               <Link href={`/users/${user.ID}`}>
-                <Button id={`edit-${user.ID}`} icon={chainLinkIcon} />
+                <Button id={`edit-${user.ID}`} />
               </Link>
             </Popover>
           </TableCell>

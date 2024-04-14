@@ -1,5 +1,5 @@
-import { getUsers } from "@/actions/get-users";
-import UserTable from "@/components/user-table";
+import { getUsers } from "@/src/actions/get-users";
+import UserTable from "@/src/components/user-table";
 import { Button } from "@ui5/webcomponents-react";
 
 /**
