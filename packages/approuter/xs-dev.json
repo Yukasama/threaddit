@@ -1,11 +1,6 @@
 {
-  "welcomeFile": "mainapp/index.html",
+  "welcomeFile": "index.html",
   "authenticationMethod": "none",
-  "httpHeaders": [
-    {
-      "Content-Type": "application/javascript js mjs"
-    }
-  ],
   "routes": [
     {
       "source": "^/user-api(.*)",
@@ -13,24 +8,23 @@
       "service": "sap-approuter-userapi"
     },
     {
+      "source": "^/dashboard(.*)",
       "dependency": "spaceapp",
       "authenticationType": "xsuaa"
     },
     {
-      "source": "^/(.*)",
+      "source": "^/(.*)$",
       "dependency": "frontend",
-      "authenticationType": "xsuaa",
-      "localDir": "../"
+      "target": "$1",
+      "localDir": "../frontend/out",
+      "authenticationType": "xsuaa"
     },
     {
-      "source": "^/mainapp/dist/(.*)",
+      "source": "^/mainapp/dist(.*)$",
       "dependency": "mainapp",
-      "authenticationType": "xsuaa",
-      "localDir": "../mainapp/dist/",
-      "replace": {
-        "pathSuffixes": ["index.html", ".js"],
-        "vars": ["escaped_text", "NOT_ESCAPED"]
-      }
+      "target": "$1",
+      "destination": "*",
+      "authenticationType": "xsuaa"
     },
     {
       "dependency": "cap-server",

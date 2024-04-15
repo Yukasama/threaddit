@@ -1,10 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { ReactNode } from "react";
 import "./globals.css";
-import { CssRegistry } from "@/src/components/providers/CssRegistry";
-import { AppShell } from "@/src/components/providers/AppShell";
-import { SideNavigator } from "@/src/components/side-navigator";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,33 +12,11 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: ReactNode;
+  children: React.ReactNode;
 }>) {
   return (
     <html lang="en">
-      <head>
-        <script
-          data-ui5-config
-          type="application/json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              theme: "sap_horizon_dark",
-            }),
-          }}
-        />
-      </head>
-      <body className={inter.className}>
-        <div className="appShell flex flex-col gap-2 h-screen p-2">
-          <CssRegistry>
-            <AppShell>
-              <div className="flex gap-2 w-full">
-                <SideNavigator />
-                {children}
-              </div>
-            </AppShell>
-          </CssRegistry>
-        </div>
-      </body>
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }
