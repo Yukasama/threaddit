@@ -56,12 +56,12 @@ modules:
     build-result: resources
     requires:
     - artifacts:
-      - spaceapp.zip
-      name: spaceapp
+      - dashboard.zip
+      name: dashboard
       target-path: resources/
-- name: spaceapp
+- name: dashboard
   type: html5
-  path: app/spaceapp
+  path: app/dashboard
   build-parameters:
     build-result: dist
     builder: custom

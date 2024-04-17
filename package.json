@@ -7,8 +7,7 @@
     "dev": "npm run dev-approuter -w=cap-server"
   },
   "sapux": [
-    "packages/frontend",
-    "packages/spaceapp",
-    "packages/mainapp"
+    "packages/dashboard",
+    "packages/frontend"
   ]
 }

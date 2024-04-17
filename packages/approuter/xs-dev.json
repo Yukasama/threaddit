@@ -9,19 +9,12 @@
     },
     {
       "source": "^/dashboard(.*)",
-      "dependency": "spaceapp",
+      "dependency": "dashboard",
       "authenticationType": "xsuaa"
     },
     {
-      "source": "^/(.*)$",
+      "source": "^/frontend/dist(.*)$",
       "dependency": "frontend",
-      "target": "$1",
-      "localDir": "../frontend/out",
-      "authenticationType": "xsuaa"
-    },
-    {
-      "source": "^/mainapp/dist(.*)$",
-      "dependency": "mainapp",
       "target": "$1",
       "destination": "*",
       "authenticationType": "xsuaa"
