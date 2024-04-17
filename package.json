@@ -9,5 +9,8 @@
   "sapux": [
     "packages/dashboard",
     "packages/frontend"
-  ]
+  ],
+  "devDependencies": {
+    "@sap/cds-dk": "^7"
+  }
 }

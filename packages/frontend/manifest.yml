@@ -1,0 +1,7 @@
+applications:
+  - name: frontend
+    path: ./
+    buildpacks:
+      - nodejs_buildpack
+    memory: 1024M
+    command: npm run start

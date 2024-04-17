@@ -1,6 +1,6 @@
 {
   "welcomeFile": "index.html",
-  "authenticationMethod": "none",
+  "authenticationMethod": "route",
   "routes": [
     {
       "source": "^/user-api(.*)",
@@ -13,10 +13,10 @@
       "authenticationType": "xsuaa"
     },
     {
-      "source": "^/frontend/dist(.*)$",
+      "source": "^/(.*)$",
       "dependency": "frontend",
       "target": "$1",
-      "destination": "*",
+      "localDir": "../frontend/dist",
       "authenticationType": "xsuaa"
     },
     {

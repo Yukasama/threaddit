@@ -1,6 +1,7 @@
 import { useState } from "react";
 import viteLogo from "/vite.svg";
 import "./App.css";
+import { Button } from "@ui5/webcomponents-react";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -14,9 +15,9 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
+        <Button onClick={() => setCount((count) => count + 1)}>
           count is {count}
-        </button>
+        </Button>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>

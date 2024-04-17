@@ -1,5 +1,5 @@
 {
-  "welcomeFile": "index.html",
+  "welcomeFile": "app/index.html",
   "routes": [
     {
       "source": "^/app/(.*)$",
@@ -17,18 +17,6 @@
       "target": "$1",
       "destination": "srv-api",
       "csrfProtection": true
-    },
-    {
-      "source": "^/dashboard(.*)",
-      "dependency": "dashboard",
-      "authenticationType": "xsuaa"
-    },
-    {
-      "source": "^/(.*)$",
-      "dependency": "frontend",
-      "target": "$1",
-      "localDir": "../frontend/dist",
-      "authenticationType": "xsuaa"
     }
   ]
 }
