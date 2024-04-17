@@ -1,8 +1,5 @@
 {
   "PORT": 5001,
-  "COOKIES": {
-    "SameSite": "None"
-  },
   "destinations": [
     {
       "Name": "cap-server",

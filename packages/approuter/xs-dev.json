@@ -8,8 +8,11 @@
       "service": "sap-approuter-userapi"
     },
     {
-      "source": "^/dashboard(.*)",
       "dependency": "dashboard",
+      "authenticationType": "xsuaa"
+    },
+    {
+      "dependency": "cap-server",
       "authenticationType": "xsuaa"
     },
     {
@@ -17,10 +20,6 @@
       "dependency": "frontend",
       "target": "$1",
       "localDir": "../frontend/dist",
-      "authenticationType": "xsuaa"
-    },
-    {
-      "dependency": "cap-server",
       "authenticationType": "xsuaa"
     }
   ]

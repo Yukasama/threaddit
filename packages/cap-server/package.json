@@ -42,6 +42,11 @@
         "db": "hana",
         "auth": "xsuaa"
       }
+    },
+    "auth": {
+      "passport": {
+        "strategy": "JWT"
+      }
     }
   }
 }
