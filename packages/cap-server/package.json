@@ -31,17 +31,20 @@
     "deploy": "cf deploy mta_archives/archive.mtar --retries 1"
   },
   "cds": {
+    "requires": {
+      "db": {
+        "kind": "sql"
+      },
+      "[production]": {
+        "db": "hana",
+        "auth": "xsuaa"
+      }
+    },
     "[development]": {
       "auth": "basic"
     },
     "[hybrid]": {
       "auth": "xsuaa"
-    },
-    "requires": {
-      "[production]": {
-        "db": "hana",
-        "auth": "xsuaa"
-      }
     },
     "auth": {
       "passport": {
